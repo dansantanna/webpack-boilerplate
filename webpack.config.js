@@ -3,10 +3,10 @@ const base = require("./webpack/base");
 
 const envs = {
   local: "local",
-  development: "dev",
-  production: "prod",
+  dev: "dev",
+  prod: "prod",
 };
 
-const env = envs[process.env.NODE_ENV || "local"];
+const env = envs[process.env.ENV_CONFIG || "local"];
 const envConfig = require(`./webpack/${env}`);
 module.exports = webpackMerge(base, envConfig);

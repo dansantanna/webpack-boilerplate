@@ -5,9 +5,9 @@
   "author": "Daniel",
   "license": "MIT",
   "scripts": {
-    "start": "cross-env NODE_ENV=local webpack-dev-server --open",
-    "build:dev": "cross-env NODE_ENV=dev webpack --mode production",
-    "build:prod": "cross-env NODE_ENV=prod webpack --mode production",
+    "start": "cross-env ENV_CONFIG=local webpack-dev-server --open",
+    "build:dev": "cross-env ENV_CONFIG=dev  webpack --mode production",
+    "build:prod": "cross-env ENV_CONFIG=prod webpack --mode production",
     "test": "jest"
   },
   "devDependencies": {
